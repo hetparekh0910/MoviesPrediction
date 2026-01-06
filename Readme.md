@@ -1,103 +1,80 @@
-🎬 Movie Recommendation System
+# 🎬 Movie Recommendation System
 
-A Content-Based Movie Recommendation System built using Python and Natural Language Processing (NLP) techniques.
+A **Content-Based Movie Recommendation System** built using **Python** and **Natural Language Processing (NLP)** techniques.  
 This project analyzes movie metadata and recommends similar movies based on their genres and descriptions.
 
-🚀 Features
+---
 
-📊 Data Analysis
-Exploratory analysis of movie and rating datasets.
+## 🚀 Features
 
-📈 Data Visualization
-Word Clouds to highlight popular genres and frequently occurring movie terms.
+- 📊 **Data Analysis**  
+  Exploratory analysis of movie and rating datasets.
 
-🤖 Recommendation Engine
-Recommends movies using TF-IDF Vectorization and Cosine Similarity based on content similarity.
+- 📈 **Data Visualization**  
+  Word Clouds to highlight popular genres and frequently occurring movie terms.
 
-🛠️ Technologies Used
+- 🤖 **Recommendation Engine**  
+  Recommends movies using **TF-IDF Vectorization** and **Cosine Similarity**.
 
-Python – Core programming language
+---
 
-Pandas – Data manipulation and analysis
+## 🛠️ Technologies Used
 
-Matplotlib – Data visualization
+- **Python** – Core programming language  
+- **Pandas** – Data manipulation and analysis  
+- **Matplotlib** – Data visualization  
+- **WordCloud** – Text-based visualizations  
+- **Scikit-learn**
+  - `TfidfVectorizer` for feature extraction  
+  - `linear_kernel` for similarity computation  
 
-WordCloud – Text-based visualizations
+---
 
-Scikit-learn –
-
-TfidfVectorizer for feature extraction
-
-linear_kernel for similarity computation
-
-📊 Dataset
+## 📊 Dataset
 
 The project uses two datasets:
 
-📁 movies.csv
-
+### 📁 movies.csv
 Contains:
+- `movieId`
+- `title`
+- `genres`  
+  *(Example: Adventure | Animation | Comedy)*
 
-movieId
-
-title
-
-genres (pipe-separated, e.g. Adventure|Animation|Comedy)
-
-📁 ratings.csv
-
+### 📁 ratings.csv
 Contains:
+- `userId`
+- `movieId`
+- `rating`
+- `timestamp`
 
-userId
+---
 
-movieId
+## ⚙️ How It Works
 
-rating
+### 1️⃣ Data Preprocessing
+- Cleans movie titles  
+- Splits genres into readable text format  
+- Prepares metadata for NLP processing  
 
-timestamp
+### 2️⃣ Feature Extraction
+- Builds a **TF-IDF matrix** using movie genres and titles  
+- Converts text data into numerical vectors  
 
-⚙️ How It Works
-1️⃣ Data Preprocessing
+### 3️⃣ Similarity Calculation
+- Uses **Cosine Similarity** to measure closeness between movies  
 
-Cleans movie titles
+### 4️⃣ Recommendation
+- Given a movie title, returns the **Top-N most similar movies**
 
-Splits genres into readable text format
+---
 
-Prepares metadata for NLP processing
+## 💻 Usage
 
-2️⃣ Feature Extraction
+### Prerequisites
+Ensure `movies.csv` and `ratings.csv` are present in the project directory.
 
-Builds a TF-IDF matrix from movie genres and titles
-
-Converts text data into numerical vectors
-
-3️⃣ Similarity Calculation
-
-Uses Cosine Similarity to measure closeness between movies
-
-4️⃣ Recommendation
-
-Given a movie title, returns the top N most similar movies
-
-💻 Usage
-Prerequisites
-
-Make sure movies.csv and ratings.csv are present in the project directory.
-
-Install Required Libraries
+### Install Required Libraries
+```bash
 pip install pandas matplotlib wordcloud scikit-learn
 
-Run the Project
-
-Open and run the Jupyter Notebook:
-
-MoviesPrediction.ipynb
-
-
-You can explore the analysis, visualizations, and test the recommendation system interactively.
-
-📌 Example Output
-
-Input: Toy Story (1995)
-
-Output: A list of similar animated and family-friendly movies
