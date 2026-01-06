@@ -1,4 +1,5 @@
-Movie Recommendation System
+**Movie Recommendation System**
+
 This project implements a Content-Based Movie Recommendation System using Python. It leverages natural language processing (NLP) techniques to analyze movie metadata and suggest similar movies to users based on their interests.
 
 🚀 Features
